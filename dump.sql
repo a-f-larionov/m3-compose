@@ -1,8 +1,11 @@
-CREATE DATABASE IF NOT EXISTS tri_base default charset utf8;
+CREATE DATABASE IF NOT EXISTS tribase_test default charset utf8;
 
-GRANT ALL PRIVILEGES ON tri_base.* TO 'tri_base'@'%';
 
-USE tri_base;
+CREATE USER 'tribase_test'@'%' IDENTIFIED BY 'tribase_test';
+
+GRANT ALL PRIVILEGES ON tribase_test.* TO 'm3_test'@'%';
+
+USE tribase;
 
 -- MySQL dump 10.13  Distrib 5.7.40, for Linux (x86_64)
 --

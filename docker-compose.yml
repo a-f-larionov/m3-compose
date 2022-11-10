@@ -1,27 +1,16 @@
 version: "3.7"
 services:
 
-  test:
-    image: node:latest
-    working_dir: /var/www
-    volumes:
-      - ./init.sh:/var/www/my_init.sh
-    command: /bin/bash /var/www/my_init.sh 123
-    depends_on:
-      - mysql
-
-
-    #entrypoint: /bin/bash -c /var/www/my_init.sh
-
   java-app:
     image: amazoncorretto
     depends_on:
       - mysql
       - kafka
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.7
-
+      - tri-base-net
+        # ipv4_address: 10.5.0.7
+        # 
+        # 
   tribase:
     image: node
     environment:
@@ -31,14 +20,13 @@ services:
       - ../tri-base:/var/www/tri-base.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.6
-        aliases:
-          - tribase
-          - m3
+      - tri-base-net
+        #        ipv4_address: 10.5.0.6
+        #        aliases:
+        #  - tribase
+        #  - m3
     depends_on:
       - mysql
-      - nginx
       - kafka
 
   nginx:
@@ -52,8 +40,10 @@ services:
       - ./keys/self-signed:/var/keys/self-signed/
       - /etc/letsencrypt:/var/keys/letsencrypt
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.5
+      - tri-base-net
+        #  ipv4_address: 10.5.0.5
+    depends_on:
+      - tribase
 
   mysql-client:
     image: mysql:5.7
@@ -67,8 +57,8 @@ services:
       - ./dump.sql:/var/scripts/dump.sql
     command: /bin/bash /var/scripts/init.sh
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.14
+      - tri-base-net
+        #        ipv4_address: 10.5.0.14
     depends_on:
       - mysql
 
@@ -82,14 +72,14 @@ services:
     volumes:
       - mysql-volume:/var/lib/mysql
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.4
+     -  tri-base-net
+    #        ipv4_address: 10.5.0.4
 
   kafka:
     image: confluentinc/cp-kafka:latest
     # ports profile depends, disable it, because bridge
-    ports:
-      - 29092:29092
+    #    ports:
+    #  - 29092:29092
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -100,8 +90,8 @@ services:
     depends_on:
       - zookeeper
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.3
+      - tri-base-net
+        #        ipv4_address: 11.5.0.3
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -109,11 +99,11 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       # ports profile depends, disable it, because bridge
-    ports:
-      - 22181:2181
+      #    ports:
+      #- 22181:2181
     networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.2
+      - tri-base-net
+        #        ipv4_address: 11.5.0.2
 
 volumes:
   mysql-volume:
@@ -123,5 +113,5 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.5.0.0/16
-          gateway: 10.5.0.1
+        - subnet: 11.5.0.0/16
+          gateway: 11.5.0.1
