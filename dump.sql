@@ -1,9 +1,8 @@
-CREATE DATABASE IF NOT EXISTS tribase_test default charset utf8;
-
-
 CREATE USER 'tribase_test'@'%' IDENTIFIED BY 'tribase_test';
 
-GRANT ALL PRIVILEGES ON tribase_test.* TO 'm3_test'@'%';
+CREATE DATABASE IF NOT EXITS tribase_test default charset utf8;
+
+GRANT ALL PRIVILEGES ON tribase_test.* TO 'tribase_test'@'%';
 
 USE tribase;
 
