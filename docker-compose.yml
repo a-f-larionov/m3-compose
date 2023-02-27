@@ -8,9 +8,7 @@ services:
       - kafka
     networks:
       - tri-base-net
-        # ipv4_address: 10.5.0.7
-        # 
-        # 
+
   tribase:
     image: node
     environment:
@@ -20,14 +18,10 @@ services:
       - ../tri-base:/var/www/tri-base.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
     networks:
-      - tri-base-net
-        #        ipv4_address: 10.5.0.6
-        #        aliases:
-        #  - tribase
-        #  - m3
+      tri-base-net:
+        ipv4_address: 10.5.0.15
     depends_on:
-      - mysql
-      - kafka
+      - mysql-migrator
 
   nginx:
     image: nginx
@@ -37,45 +31,24 @@ services:
     volumes:
       - ../tri-base/public:/var/www/tri-base.${PROFILE}/public
       - ./nginx/${PROFILE}/conf.d:/etc/nginx/conf.d
-      - ./keys/self-signed:/var/keys/self-signed/
-      - /etc/letsencrypt:/var/keys/letsencrypt
+      - ${NGINX_SSL_CERTIFICATE}
+      - ${NGINX_SSL_CERTIFICATE_KEY}
     networks:
       - tri-base-net
-        #  ipv4_address: 10.5.0.5
     depends_on:
       - tribase
-
-  mysql-client:
-    image: mysql:5.7
-    environment:
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-      - MYSQL_HOST=mysql
-    volumes:
-      - ./init.sh:/var/scripts/init.sh
-      - ./dump.sql:/var/scripts/dump.sql
-    command: /bin/bash /var/scripts/init.sh
-    networks:
-      - tri-base-net
-        #        ipv4_address: 10.5.0.14
-    depends_on:
-      - mysql
 
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-    #      - MYSQL_DATABASE=tri_base{$PROFILE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
     volumes:
       - mysql-volume:/var/lib/mysql
     networks:
      -  tri-base-net
-    #        ipv4_address: 10.5.0.4
-
-
 
   kafka:
     image: confluentinc/cp-kafka:latest
@@ -93,7 +66,7 @@ services:
       - zookeeper
     networks:
       - tri-base-net
-        #        ipv4_address: 11.5.0.3
+
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -105,7 +78,23 @@ services:
       #- 22181:2181
     networks:
       - tri-base-net
-        #        ipv4_address: 11.5.0.2
+
+  mysql-migrator:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_HOST=mysql
+    volumes:
+      - ./migrator:/var/migrator
+    working_dir: /var/migrator/
+    command:  ./migrate.sh
+    networks:
+      - tri-base-net
+    depends_on:
+      - mysql
 
 volumes:
   mysql-volume:
@@ -115,5 +104,5 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 11.5.0.0/16
-          gateway: 11.5.0.1
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
