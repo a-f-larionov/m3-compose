@@ -75,6 +75,8 @@ services:
      -  tri-base-net
     #        ipv4_address: 10.5.0.4
 
+
+
   kafka:
     image: confluentinc/cp-kafka:latest
     # ports profile depends, disable it, because bridge
