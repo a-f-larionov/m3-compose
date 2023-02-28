@@ -28,7 +28,7 @@ if [ "$dbvar" = "" ]; then
   echo "no tables found"
   echo "apply dump.sql"
 
-  mysql -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE < ./dump.sql
+  mysql -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE < /migrator/dump.sql
 
   echo "finished!"
 

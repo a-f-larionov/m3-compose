@@ -6,22 +6,16 @@ services:
     depends_on:
       - mysql
       - kafka
-    networks:
-      - tri-base-net
 
-  tribase:
+  node:
     image: node
     environment:
-      - PROFILE=${PROFILE}
-    working_dir: /var/www/tri-base.${PROFILE}/server
+      PROFILE: ${PROFILE}
+    working_dir: /m3-node.${PROFILE}/server
     volumes:
-      - ../tri-base:/var/www/tri-base.${PROFILE}
+      - ../m3-node:/m3-node.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
-    networks:
-      tri-base-net:
-        ipv4_address: 10.5.0.15
-    depends_on:
-      - mysql-migrator
+    depends_on: [ mysql-migrator ]
 
   nginx:
     image: nginx
@@ -29,26 +23,20 @@ services:
       - ${NGINX_PORT_HTTP}:${NGINX_PORT_HTTP}
       - ${NGINX_PORT_HTTPS}:${NGINX_PORT_HTTPS}
     volumes:
-      - ../tri-base/public:/var/www/tri-base.${PROFILE}/public
+      - ../m3-node/:/m3-node.${PROFILE}/public
       - ./nginx/${PROFILE}/conf.d:/etc/nginx/conf.d
       - ${NGINX_SSL_CERTIFICATE}
       - ${NGINX_SSL_CERTIFICATE_KEY}
-    networks:
-      - tri-base-net
-    depends_on:
-      - tribase
+    depends_on: [ node ]
 
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-    volumes:
-      - mysql-volume:/var/lib/mysql
-    networks:
-     -  tri-base-net
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes: [ /var/lib/mysql ]
 
   kafka:
     image: confluentinc/cp-kafka:latest
@@ -64,9 +52,6 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
       - zookeeper
-    networks:
-      - tri-base-net
-
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -76,33 +61,14 @@ services:
       # ports profile depends, disable it, because bridge
       #    ports:
       #- 22181:2181
-    networks:
-      - tri-base-net
 
   mysql-migrator:
     image: mysql:5.7
     environment:
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_HOST=mysql
-    volumes:
-      - ./migrator:/var/migrator
-    working_dir: /var/migrator/
-    command:  ./migrate.sh
-    networks:
-      - tri-base-net
-    depends_on:
-      - mysql
-
-volumes:
-  mysql-volume:
-
-networks:
-  tri-base-net:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.5.0.0/16
-          gateway: 10.5.0.1
+      MYSQL_HOST: mysql
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes: [ ./migrator:/migrator ]
+    entrypoint: bash /migrator/run.sh
+    depends_on: [ mysql ]
