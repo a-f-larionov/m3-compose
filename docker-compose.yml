@@ -23,7 +23,7 @@ services:
       - ${NGINX_PORT_HTTP}:80
       - ${NGINX_PORT_HTTPS}:443
     volumes:
-      - ../m3-node/:/m3-node.${PROFILE}/public
+      - ../m3-node/public:/m3-node/public
       - ./nginx/${PROFILE}/conf.d:/etc/nginx/conf.d
       - ${NGINX_SSL_CERTIFICATE}
       - ${NGINX_SSL_CERTIFICATE_KEY}
