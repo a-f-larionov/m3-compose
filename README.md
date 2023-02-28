@@ -37,7 +37,10 @@ Checklist for these files:
     curl http[s]://host:port/service/--help
     curl http[s]://host:port/service/client-standalone?soc-net-user-id=1
 
+
 ### Contacts
 
 email: [a.f.larionov@gmail.com](mailto:a.f.larionov@gmail.com)<br>
-telegram: [a_f_larionov](https://t.me/a_f_larionov)
+telegram: [a_f_larionov](https://t.me/a_f_larionov)<br>
+facebook: https://www.facebook.com/a.f.larionov <br>
+vkontakte: https://vk.com/a.f.larionov
