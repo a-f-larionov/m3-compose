@@ -1,24 +1,43 @@
 # m3-compose
-M3 Compose
 
-### Install
+Match three - demo project
 
-git clone m3-compose, m3-tri-base, m3-x-services
+Prod Version:   https://vk.com/app7506736
+
+### Requirements
+
+[See Install Docker and create SSL keys for nginx](additional.md)
+
+### Installation
+
+    cd /var/m3-test
+    git clone https://github.com/a-f-larionov/m3-node.git
+    git clone https://github.com/a-f-larionov/m3-compose.git
+    git clone https://github.com/a-f-larionov/m3-x-service.git
 
 ### Setup
-copy .env.template to .env file and write environment variables
-- db
-- nginx
 
+    cp ./m3-node/server/config.example.js ./m3-node/server/config.test.js
+    cp ./m3-node/client/config.example.js ./m3-node/client/config.test.js
+    cp ./m3-compose/.env.example ./m3-compose/.env
 
-upload config.prod1.tri-base to /server
-upload config.prod1.tri-base to /client and set ip for wss
-see tempalte Config.PROFILE-TEMPLATE.tri-base.js
+Checklist for these files:
+- database credentials
+- soc net appId and secretKey
+- telegram chatId and botToken
+- web socket host, port, url.
 
 ### Run
 
-cd /var/job/m3-test/
-    
-    docker compose up
+    docker compose up -d
 
 ### Test
+
+    curl http[s]://host:port/images/coin.png
+    curl http[s]://host:port/service/--help
+    curl http[s]://host:port/service/client-standalone?soc-net-user-id=1
+
+### Contacts
+
+email: [a.f.larionov@gmail.com](mailto:a.f.larionov@gmail.com)<br>
+telegram: [a_f_larionov](https://t.me/a_f_larionov)
