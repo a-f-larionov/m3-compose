@@ -10,7 +10,9 @@ Prod Version:   https://vk.com/app7506736
 
 ### Installation
 
-    cd /var/m3-test
+    cd /var/
+    mkdir m3-test
+    cd m3-test
     git clone https://github.com/a-f-larionov/m3-node.git
     git clone https://github.com/a-f-larionov/m3-compose.git
     git clone https://github.com/a-f-larionov/m3-x-service.git
