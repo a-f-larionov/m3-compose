@@ -20,8 +20,8 @@ services:
   nginx:
     image: nginx
     ports:
-      - ${NGINX_PORT_HTTP}:${NGINX_PORT_HTTP}
-      - ${NGINX_PORT_HTTPS}:${NGINX_PORT_HTTPS}
+      - ${NGINX_PORT_HTTP}:80
+      - ${NGINX_PORT_HTTPS}:443
     volumes:
       - ../m3-node/:/m3-node.${PROFILE}/public
       - ./nginx/${PROFILE}/conf.d:/etc/nginx/conf.d
@@ -72,3 +72,5 @@ services:
     volumes: [ ./migrator:/migrator ]
     entrypoint: bash /migrator/run.sh
     depends_on: [ mysql ]
+
+
