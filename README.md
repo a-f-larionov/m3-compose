@@ -4,6 +4,8 @@ Match three - demo project
 
 Prod Version:   https://vk.com/app7506736
 
+### [Development plan](plan.md)
+
 ### Requirements
 
 [See Install Docker and create SSL keys for nginx](additional.md)
