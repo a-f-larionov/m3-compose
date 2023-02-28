@@ -21,11 +21,11 @@ Prod Version:   https://vk.com/app7506736
     cp ./m3-node/client/config.example.js ./m3-node/client/config.test.js
     cp ./m3-compose/.env.example ./m3-compose/.env
 
-Checklist for these files:
-- database credentials
-- soc net appId and secretKey
-- telegram chatId and botToken
-- web socket host, port, url.
+_checklist for these files:_
+- _database credentials_
+- _soc net appId and secretKey_
+- _telegram chatId and botToken_
+- _web socket host, port, url._
 
 ### Run
 
