@@ -4,7 +4,10 @@ Match three - demo project
 
 Prod Version:   https://vk.com/app7506736
 
-#### [Development plan](plan.md)
+#### [Legenda](docs/plan-stage-0.md)
+#### [Plan stage 0](docs/plan-stage-0.md)
+#### [Plan stage 1](docs/plan-stage-1.md)
+
 #### Depends projects: 
 - [m3-node](https://github.com/a-f-larionov/m3-node/).
 - [m3-x-service](https://github.com/a-f-larionov/m3-users-service/).
