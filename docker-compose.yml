@@ -4,6 +4,10 @@ services:
 
   java-app:
     image: amazoncorretto:17
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     volumes:
       - ../m3-users-service/build/libs/:/m3-service/
     working_dir: /m3-service/
@@ -35,6 +39,8 @@ services:
 
   mysql:
     image: mysql:5.7
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
@@ -44,10 +50,12 @@ services:
 
   kafka:
     image: bitnami/kafka
+    hostname: "kafka"
     ports:
       - "9092:9092"
     volumes: [ kafka_data:/bitnami ]
     environment:
+      - KAFKA_BROKER_ID=1
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
