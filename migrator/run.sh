@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "wait for mysql connect $MYSQL_DATABASE"
 
 while ! mysqladmin ping -h"$MYSQL_HOST" --silent ; do
