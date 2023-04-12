@@ -10,7 +10,7 @@ Prod Version:   https://vk.com/app7506736
 
 #### Depends projects: 
 - [m3-node](https://github.com/a-f-larionov/m3-node/).
-- [m3-x-service](https://github.com/a-f-larionov/m3-users-service/).
+- [m3-users-service](https://github.com/a-f-larionov/m3-users-service/).
 
 ### Requirements
 
@@ -21,7 +21,7 @@ Prod Version:   https://vk.com/app7506736
     cd /var/ && mkdir m3-test && cd m3-test
     git clone https://github.com/a-f-larionov/m3-node.git
     git clone https://github.com/a-f-larionov/m3-compose.git
-    git clone https://github.com/a-f-larionov/m3-x-service.git
+    git clone https://github.com/a-f-larionov/m3-users-service.git
 
 ### Setup
 
