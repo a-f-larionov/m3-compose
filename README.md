@@ -46,6 +46,12 @@ _checklist for these files:_
     curl http[s]://host:port/service/client-standalone?soc-net-user-id=1
 
 
+### Known issues
+
+For letsencrypt set  
+ /etc/letsencrypt:/var/keys/letsencrypt
+
+
 ### Contacts
 
 email: [a.f.larionov@gmail.com](mailto:a.f.larionov@gmail.com)<br>
