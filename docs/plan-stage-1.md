@@ -16,102 +16,102 @@
 > 💰 Код node обращается к сервису на java для авторизации
 
 
-<br>🧡 smui 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 smui 🎬 25.04.23 🚧 xx.xx.23
 
 > 💡 sendMeUserInfo
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smuli 2 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 smuli 2 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 sendMeUserListInfo
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smmf 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 smmf 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 sendMeMapFriends
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smfibsn 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 smfibsn 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 sendMeFriendIdsBySocNet
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smtu 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 smtu 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 sendMeTopUsers
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 sms 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 sms 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 sendMeScores
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 hb 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 hb 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 healthBack
 
 > 💰 Метод полностью перенесен на m3-users-service
 
-<br>🧡 hd 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 hd 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 healthDown
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 stm 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 stm 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 spendTurnsMoney
 
 > 💰 Метод полностью перенесен на m3-users-service
 
-<br>🧡 eg  🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 eg  🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 exitGame
 
 > 💰 Метод полностью перенесен на m3-users-service
 
-<br>🧡 lg  🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 lg  🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 looseGame
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 zl 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 zl 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 zeroLife
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 datauser  🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 datauser  🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 Убрать все, что касается SAPIUser. Доработать как кэш. Если остались стороние модули - не трогаем код.
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 Cntx 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 Cntx 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 Убрать все, что касается SAPIUser. Доработать как кэш. Если о стались сторонеи модули - не трогаем
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 third-stage-develop 🎬 xx.xx.xx 🚧 xx.xx.xx
+<br>🧡 third-stage-develop 🎬 xx.xx.23 🚧 xx.xx.23
 
 > 💡 Разработка задача 3ьего этапа
 
