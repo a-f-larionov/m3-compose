@@ -8,6 +8,8 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
+      VK_APP_ID: ${VK_APP_ID}
+      VK_SECRET_KEY: ${VK_SECRET_KEY}
     entrypoint: bash -c "java -jar auth-0.0.1-SNAPSHOT.jar"
     depends_on:
       - kafka
