@@ -23,21 +23,21 @@
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smuli 🎬 13.09.23 🚧 xx.xx.23
+<br>🧡 smui 🎬 12.09.23 🚧 13.09.23
 
 > 💡 sendMeUserListInfo
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smmf 🎬 xx.xx.23 🚧 xx.xx.23
+<br>🧡 smmf 🎬 13.09.23 🚧 13.09.23
 
 > 💡 sendMeMapFriends
 
 > 💰 Метод полностью перенесен на m3-users-service
 
 
-<br>🧡 smfibsn 🎬 xx.xx.23 🚧 xx.xx.23
+<br>🧡 smfibsn 🎬 13.09.23 🚧 xx.xx.23
 
 > 💡 sendMeFriendIdsBySocNet
 
