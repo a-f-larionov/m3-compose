@@ -1,8 +1,8 @@
 ### 🥗 Этап 2 - Map And Points Service
 
-🚧...
+🏁...
 
-<Br>1. 🧡 release 🎬 xx.xx.xx 🚧 xx.xx.xx
+<Br>1. 🧡 release 🎬 xx.xx.xx 🏁 xx.xx.xx
 
 > 💡 sendScores
 
