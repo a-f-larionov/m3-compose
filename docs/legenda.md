@@ -7,4 +7,5 @@
 > <br> 💰 - Результат, профит задачи, что можно увидеть\потрогать.
 > <br> 🌱 - BackLog, задача ушла\находиться в бэклоге.
 > <br> 🏁 - Task Begin state
-> <br> ✅ - Task Completed state! 
+> <br> ✅ - Task Completed state!
+https://github.com/a-f-larionov/m3-compose/blob/main/docs/legenda.md
