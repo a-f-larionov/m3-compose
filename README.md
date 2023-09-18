@@ -4,9 +4,12 @@ Match three - demo project
 
 Prod Version:   https://vk.com/app7506736
 
-#### [Legenda](docs/plan-stage-0.md)
-#### [Plan stage 0](docs/plan-stage-0.md)
-#### [Plan stage 1](docs/plan-stage-1.md)
+#### [Legenda](docs/legenda.md)
+#### [Plan stage 0](docs/plan-stage-0.md) Prepare infrastructure
+#### [Plan stage 1](docs/plan-stage-1.md) User Service
+#### [Plan stage 2](docs/plan-stage-2.md) Map and Points Service
+#### [Plan stage 3](docs/plan-stage-3.md) Stuff and Chests And Shop Service
+#### [Plan stage 4](docs/plan-stage-4.md) Statistics Service
 
 #### Depends projects: 
 - [m3-node](https://github.com/a-f-larionov/m3-node/).

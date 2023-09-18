@@ -1,6 +1,6 @@
-### 🥗 Этап 2 - функционал Карты и Пункты
+### 🥗 Этап 2 - Map And Points Service
 
-🚧🚧
+🚧...
 
 <Br>1. 🧡 release 🎬 xx.xx.xx 🚧 xx.xx.xx
 
