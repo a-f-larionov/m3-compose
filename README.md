@@ -7,15 +7,15 @@ Prod Version:   https://vk.com/app7506736
 #### [Legenda](docs/legenda.md)
 #### [Plan stage 0 Prepare](docs/plan-stage-0-prepare.md) Prepare infrastructure
 Status: ✅✅✅✅✅✅
-#### [Plan stage 1 Common Service](docs/plan-stage-1-common-service.md) Map and Points Service
+#### [Plan stage 1 Common Service](docs/plan-stage-1-common-service.md) Common Service
 Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
-#### [Plan stage 3 Map and Points Service](docs/plan-stage-3-map-and-points.md) Stuff and Chests And Shop Service
+#### [Plan stage 3 Map and Points Service](docs/plan-stage-3-map-and-points.md) Map and Points Service
 Status: 🏁🏁🏁🏁🏁
-#### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Statistics Service
+#### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Stuff Service
 Status: 🏁🏁🏁🏁🏁
-#### [Plan stage 5 Payment Service](docs/plan-stage-5-payment-service.md) Statistics Service
+#### [Plan stage 5 Payment Service](docs/plan-stage-5-payment-service.md) Payment Service
 Status: 🏁🏁🏁🏁
 
 
