@@ -6,15 +6,26 @@ Prod Version:   https://vk.com/app7506736
 
 #### [Legenda](docs/legenda.md)
 #### [Plan stage 0 Prepare](docs/plan-stage-0-prepare.md) Prepare infrastructure
+Status: ✅✅✅✅✅✅
 #### [Plan stage 1 Common Service](docs/plan-stage-1-common-service.md) Map and Points Service
+Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
+Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 #### [Plan stage 3 Map and Points Service](docs/plan-stage-3-map-and-points.md) Stuff and Chests And Shop Service
+Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Statistics Service
+Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 5 Payment Service](docs/plan-stage-5-payment-service.md) Statistics Service
+Status: 🏁🏁🏁🏁
+
 
 #### Depends projects: 
 - [m3-node](https://github.com/a-f-larionov/m3-node/).
+- [m3-common-service](https://github.com/a-f-larionov/m3-common-service/).
 - [m3-users-service](https://github.com/a-f-larionov/m3-users-service/).
+- [m3-map-and-points-service](https://github.com/a-f-larionov/m3-map-and-points-service/).
+- [m3-stuff-service](https://github.com/a-f-larionov/m3-stuff-service/).
+- [m3-payment-service](https://github.com/a-f-larionov/m3-payment-service/).
 
 ### Requirements
 
@@ -22,10 +33,14 @@ Prod Version:   https://vk.com/app7506736
 
 ### Installation
 
-    cd /var/ && mkdir m3-test && cd m3-test
+    cd /var/ && mkdir m3-local && cd m3-local
     git clone --depth=1 https://github.com/a-f-larionov/m3-node.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-compose.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-common-service.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-users-service.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-map-and-points-service.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-stuff-service.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-payment-service.git
 
 ### Setup
 
