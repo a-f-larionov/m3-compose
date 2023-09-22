@@ -20,12 +20,12 @@ Status: 🏁🏁🏁🏁
 
 
 #### Depends projects: 
-- [m3-node](https://github.com/a-f-larionov/m3-node/).
 - [m3-common-service](https://github.com/a-f-larionov/m3-common-service/).
 - [m3-users-service](https://github.com/a-f-larionov/m3-users-service/).
 - [m3-map-and-points-service](https://github.com/a-f-larionov/m3-map-and-points-service/).
 - [m3-stuff-service](https://github.com/a-f-larionov/m3-stuff-service/).
 - [m3-payment-service](https://github.com/a-f-larionov/m3-payment-service/).
+- [m3-node(legacy)](https://github.com/a-f-larionov/m3-node/).
 
 ### Requirements
 
