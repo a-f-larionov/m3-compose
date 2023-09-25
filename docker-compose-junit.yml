@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+
+  mysql-junit:
+      image: mysql:5.7
+      ports:
+        - "33306:3306"
+      environment:
+        MYSQL_ROOT_PASSWORD: ${DB_MYSQL_ROOT_PASSWORD}
+        MYSQL_USER: ${DB_JUNIT_USER}
+        MYSQL_PASSWORD: ${DB_JUNIT_PASSWORD}
+        MYSQL_DATABASE: ${DB_JUNIT_DATABASE}
+      volumes: [ DB_junit_data:/var/lib/mysql ]
+
+volumes:
+  DB_junit_data:

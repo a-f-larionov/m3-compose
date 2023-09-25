@@ -2,18 +2,49 @@ version: "3.7"
 
 services:
 
-  java-app:
+  users-service:
     build: ../m3-users-service/
     environment:
       DATASOURCE_URL: ${DATASOURCE_URL}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
       VK_APP_ID: ${VK_APP_ID}
       VK_SECRET_KEY: ${VK_SECRET_KEY}
-    entrypoint: bash -c "java -jar auth-0.0.1-SNAPSHOT.jar"
-    depends_on:
-      - kafka
-      - mysql
+    depends_on: [ kafka, mysql ]
+
+  common-service:
+    build: ../m3-common-service/
+    environment:
+      DATASOURCE_URL: ${DATASOURCE_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on: [ kafka, mysql ]
+
+  stuff-service:
+    build: ../m3-common-service/
+    environment:
+      DATASOURCE_URL: ${DATASOURCE_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on: [ kafka, mysql ]
+
+  map-and-points-service:
+    build: ../m3-common-service/
+    environment:
+      DATASOURCE_URL: ${DATASOURCE_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on: [ kafka, mysql ]
+
+  payment-service:
+    build: ../m3-common-service/
+    environment:
+      DATASOURCE_URL: ${DATASOURCE_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on: [ kafka, mysql ]
+
+
   node:
     image: node
     environment:
@@ -41,11 +72,11 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-    volumes: [ mysql_data:/var/lib/mysql ]
+      MYSQL_ROOT_PASSWORD: ${DB_MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    volumes: [ DB_data:/var/lib/mysql ]
 
   kafka:
     image: bitnami/kafka
@@ -73,14 +104,15 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_HOST: mysql
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-    volumes: [ ./migrator:/migrator, mysql_data:/var/lib/mysql ]
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    volumes: [ ./migrator:/migrator, DB_data:/var/lib/mysql ]
     entrypoint: bash /migrator/run.sh
     depends_on: [ mysql ]
 
 volumes:
-  mysql_data:
+  DB_data:
+  DB_junit_data:
   kafka_data:
   zookeeper_data:
