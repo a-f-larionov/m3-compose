@@ -1,8 +1,8 @@
 ### 🥗 Stage 2 - Common Service
 
-Status: 🏁🏁🏁🏁🏁
+Status: ✅🏁🏁🏁🏁
 
-<br>1. 🧡 Log 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>1. 🧡 Log 🎬 05.10.23 🏁 11.10.23
 
 > 💡 Реализуем метод Log Сервиса Common
 

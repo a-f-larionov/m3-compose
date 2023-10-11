@@ -1,49 +1,40 @@
 version: "3.7"
 
+x-envv: &env
+  DATASOURCE_URL: ${DATASOURCE_URL}
+  DB_USER: ${DB_USER}
+  DB_PASSWORD: ${DB_PASSWORD}
+  VK_APP_ID: ${VK_APP_ID}
+  VK_SECRET_KEY: ${VK_SECRET_KEY}
+  TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID}
+  TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
+
 services:
 
   users-service:
     build: ../m3-users-service/
-    environment:
-      DATASOURCE_URL: ${DATASOURCE_URL}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-      VK_APP_ID: ${VK_APP_ID}
-      VK_SECRET_KEY: ${VK_SECRET_KEY}
+    environment: *env
     depends_on: [ kafka, mysql ]
 
   common-service:
     build: ../m3-common-service/
-    environment:
-      DATASOURCE_URL: ${DATASOURCE_URL}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+    environment: *env
     depends_on: [ kafka, mysql ]
 
   stuff-service:
     build: ../m3-stuff-service/
-    environment:
-      DATASOURCE_URL: ${DATASOURCE_URL}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+    environment: *env
     depends_on: [ kafka, mysql ]
 
   map-and-points-service:
     build: ../m3-map-and-points-service/
-    environment:
-      DATASOURCE_URL: ${DATASOURCE_URL}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+    environment: *env
     depends_on: [ kafka, mysql ]
 
   payment-service:
     build: ../m3-payment-service/
-    environment:
-      DATASOURCE_URL: ${DATASOURCE_URL}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+    environment: *env
     depends_on: [ kafka, mysql ]
-
 
   node:
     image: node
