@@ -1,16 +1,16 @@
 ### 🥗 Stage 2 - Common Service
 
-Status: ✅🏁🏁🏁🏁
+Status: ✅✅✅🏁🏁
 
-<br>1. 🧡 Log 🎬 05.10.23 🏁 11.10.23
+<br>1. 🧡 Log 🎬 05.10.23 ✅11.10.23
 
 > 💡 Реализуем метод Log Сервиса Common
 
-<br>2. 🧡 SaveUserAgent 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>2. 🧡 SaveUserAgent 🎬 12.10.23 ✅ 14.10.23
 
 > 💡 Реализуем метод SaveUserAgent Сервиса Common
 
-<br>3. 🧡 SendMeTime 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>3. 🧡 SendMeTime 🎬 12.10.23 ✅ 14.10.23
 
 > 💡 Реализуем метод SendMeTime Сервиса Common
 
