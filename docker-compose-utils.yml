@@ -8,6 +8,8 @@ services:
       REPOSILITE_OPTS: -p 8082 -t admin:${REPOSILITE_PASSWORD}
     ports:
       - 8082:8082
+    volumes:
+      - reposilite_data:/app/data
 
 volumes:
   reposilite_data:
