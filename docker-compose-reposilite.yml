@@ -5,7 +5,7 @@ services:
   reposilite:
     image: dzikoysk/reposilite:latest
     environment:
-      REPOSILITE_OPTS: -p 8082 -t nnn:ttt
+      REPOSILITE_OPTS: -p 8082 -t admin:${REPOSILITE_PASSWORD}
     ports:
       - 8082:8082
 
