@@ -2,10 +2,12 @@ version: "3.7"
 
 services:
 
-  nexus:
-    image: dockette/nexus:latest
+  reposilite:
+    image: dzikoysk/reposilite:latest
+    environment:
+      REPOSILITE_OPTS: -p 8082 -t nnn:ttt
     ports:
-      - 8081:8081
+      - 8082:8082
 
 volumes:
-  nexus_data:
+  reposilite_data:
