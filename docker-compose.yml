@@ -67,7 +67,7 @@ services:
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
-    volumes: [ DB_data:/var/lib/mysql ]
+    volumes: [ DB_data:/var/lib/mysql, ./mysql/conf.d:/etc/mysql/conf.d/]
 
   kafka:
     image: bitnami/kafka
