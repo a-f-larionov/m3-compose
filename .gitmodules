@@ -1,3 +1,4 @@
 [submodule "m3-users-service"]
 	path = m3-users-service
-	url = https://github.com/a-f-larionov/m3-users-service
+	url = git@github:a-f-larioinov/m3-users-service.git
+	branch = main
