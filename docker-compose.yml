@@ -44,7 +44,7 @@ services:
     volumes:
       - ../m3-node:/m3-node.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
-    depends_on: [ mysql-migrator, kafka ]
+    depends_on: [ mysql-migrator, kafka  ]
 
   nginx:
     image: nginx
