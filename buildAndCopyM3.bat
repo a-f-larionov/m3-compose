@@ -12,7 +12,7 @@ goto :eof
 
 :dockerRestart
 SETLOCAL
-    ssh root@prod-server-2.ru "cd /var/job/m3-prod/m3-compose && docker compose up -d --build"
+    ssh root@prod-server-2.ru "cd /var/job/m3/m3-compose && docker compose up -d --build"
 ENDLOCAL
 EXIT /B
 
@@ -47,10 +47,10 @@ SETLOCAL
 SET PROJECT_FOLDER=%1
 
 echo "start copy to server"
-ssh root@prod-server-2.ru "mkdir /var/job/m3-prod/%PROJECT_FOLDER%/build  2> null
-ssh root@prod-server-2.ru "mkdir /var/job/m3-prod/%PROJECT_FOLDER%/build/libs  2> null
+ssh root@prod-server-2.ru "mkdir /var/job/m3/%PROJECT_FOLDER%/build  2> null
+ssh root@prod-server-2.ru "mkdir /var/job/m3/%PROJECT_FOLDER%/build/libs  2> null
 cd ..
-scp -pr ./%PROJECT_FOLDER%/build/libs/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar root@prod-server-2.ru:/var/job/m3-prod/%PROJECT_FOLDER%/build/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar
+scp -pr ./%PROJECT_FOLDER%/build/libs/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar root@prod-server-2.ru:/var/job/m3/%PROJECT_FOLDER%/build/libs/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar
 cd m3-compose
 
 ENDLOCAL
