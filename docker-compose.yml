@@ -45,7 +45,7 @@ services:
     volumes:
       - ../m3-node:/m3-node.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
-    depends_on: [ mysql-migrator, kafka  ]
+    depends_on: [ kafka  ]
 
   nginx:
     image: nginx
@@ -86,17 +86,6 @@ services:
       KAFKA_CFG_NODE_ID: 1
       KAFKA_CFG_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:9093
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-
-  mysql-migrator:
-    image: mysql:5.7
-    environment:
-      MYSQL_HOST: mysql
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_DATABASE}
-    volumes: [ ./migrator:/migrator, DB_data:/var/lib/mysql ]
-    entrypoint: bash /migrator/run.sh
-    depends_on: [ mysql ]
 
 volumes:
   DB_data:
