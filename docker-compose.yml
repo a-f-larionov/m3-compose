@@ -11,18 +11,13 @@ x-envv: &env
 
 services:
 
-  users-service:
-    build: ../m3-users-service/
-    environment: *env
-    depends_on: [ kafka, mysql ]
-
   common-service:
     build: ../m3-common-service/
     environment: *env
     depends_on: [ kafka, mysql ]
 
-  stuff-service:
-    build: ../m3-stuff-service/
+  users-service:
+    build: ../m3-users-service/
     environment: *env
     depends_on: [ kafka, mysql ]
 
@@ -31,10 +26,16 @@ services:
     environment: *env
     depends_on: [ kafka, mysql ]
 
-  payment-service:
-    build: ../m3-payment-service/
-    environment: *env
-    depends_on: [ kafka, mysql ]
+#  stuff-service:
+#    build: ../m3-stuff-service/
+#    environment: *env
+#    depends_on: [ kafka, mysql ]
+#
+#
+#  payment-service:
+#    build: ../m3-payment-service/
+#    environment: *env
+#    depends_on: [ kafka, mysql ]
 
   node:
     image: node
@@ -75,22 +76,16 @@ services:
     hostname: "kafka"
     ports:
       - "9092:9092"
+      - "9093:9093"
     volumes: [ kafka_data:/bitnami ]
     environment:
-      - KAFKA_HEAP_OPTS=-Xmx1024m -Xmn1k -Xss256k
-      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_BROKER_ID=1
-      - ALLOW_PLAINTEXT_LISTENER=yes
-    depends_on:
-      - zookeeper
-
-  zookeeper:
-    image: bitnami/zookeeper
-    ports:
-      - "2181:2181"
-    volumes: [ zookeeper_data:/bitnami ]
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
+      KAFKA_HEAP_OPTS: -Xmx1024m -Xmn1k -Xss256k
+      KAFKA_PROCESS_ROLES: 'broker, controller'
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CFG_NODE_ID: 1
+      KAFKA_CFG_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:9093
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
 
   mysql-migrator:
     image: mysql:5.7
