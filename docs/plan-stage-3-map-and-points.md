@@ -1,6 +1,6 @@
 ### 🥗 Stage 2 - Map And Points
 
-Status: 🏁🏁🏁🏁🏁
+Status: ✅🏁🏁🏁🏁
 
 <br>1. 🧡 OnFinish 🎬 xx.xx.xx 🏁 xx.xx.xx
 
@@ -10,7 +10,7 @@ Status: 🏁🏁🏁🏁🏁
 
 > 💡 Реализуем метод ReloadLevels Сервиса MapAndPoints
 
-<br>3. 🧡 SendMeMapInfo 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>3. 🧡 SendMeMapInfo ✅ 01.11.23 03.11.23
 
 > 💡 Реализуем метод SendMeMapInfo Сервиса MapAndPoints
 
