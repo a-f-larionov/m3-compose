@@ -76,7 +76,6 @@ services:
     hostname: "kafka"
     ports:
       - "9092:9092"
-      - "9093:9093"
     volumes: [ kafka_data:/bitnami ]
     environment:
       KAFKA_HEAP_OPTS: -Xmx1024m -Xmn1k -Xss256k
@@ -86,6 +85,7 @@ services:
       KAFKA_CFG_NODE_ID: 1
       KAFKA_CFG_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:9093
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CFG_OFFSETS_TOPIC_NUM_PARTITIONS: 1
 
 volumes:
   DB_data:
