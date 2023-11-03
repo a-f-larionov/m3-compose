@@ -12,7 +12,7 @@ Status: ✅✅✅✅✅
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 #### [Plan stage 3 Map and Points Service](docs/plan-stage-3-map-and-points.md) Map and Points Service
-Status: ✅🏁🏁🏁🏁
+Status: ✅🏁🏁🏁
 #### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Stuff Service
 Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 5 Payment Service](docs/plan-stage-5-payment-service.md) Payment Service
