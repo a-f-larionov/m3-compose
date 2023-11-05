@@ -2,7 +2,7 @@
 
 Status: ✅🏁🏁🏁
 
-<br>1. 🧡 OnFinish 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>1. 🧡 OnFinish 🎬 05.11.23 🏁 xx.xx.xx
 
 > 💡 Реализуем метод OnFinish Сервиса MapAndPoints
 
