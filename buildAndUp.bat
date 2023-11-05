@@ -1,5 +1,7 @@
 @echo off
 
+CALL :publishToLocalMaven m3-lib
+
 CALL :buildAndCopyToServer m3-common-service
 CALL :buildAndCopyToServer m3-users-service
 CALL :buildAndCopyToServer m3-map-service
@@ -35,6 +37,21 @@ echo build %PROJECT_FOLDER%
 cd ..
 cd %PROJECT_FOLDER%
 call gradle build -x test
+cd ..
+cd m3-compose
+
+ENDLOCAL
+EXIT /B
+
+
+:publishToLocalMaven
+SETLOCAL
+SET PROJECT_FOLDER=%1
+
+echo publishToMaven $PROJECT_FOLDER
+cd ..
+cd %PROJECT_FOLDER%
+call gradle publishToMavenLocal -x test
 cd ..
 cd m3-compose
 
