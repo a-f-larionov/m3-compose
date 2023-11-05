@@ -21,8 +21,8 @@ services:
     environment: *env
     depends_on: [ kafka, mysql ]
 
-  map-and-points-service:
-    build: ../m3-map-and-points-service/
+  map-service:
+    build: ../m3-map-service/
     environment: *env
     depends_on: [ kafka, mysql ]
 

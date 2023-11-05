@@ -1,4 +1,4 @@
-### 🥗 Stage 2 - Map And Points
+### 🥗 Stage 2 - Map
 
 Status: ✅🏁🏁🏁
 

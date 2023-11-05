@@ -11,7 +11,7 @@ Status: ✅✅✅✅✅✅
 Status: ✅✅✅✅✅
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
-#### [Plan stage 3 Map and Points Service](docs/plan-stage-3-map-and-points.md) Map and Points Service
+#### [Plan stage 3 Map Service](docs/plan-stage-3-map-service.md) Map and Points Service
 Status: ✅🏁🏁🏁
 #### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Stuff Service
 Status: 🏁🏁🏁🏁🏁
@@ -22,7 +22,7 @@ Status: 🏁🏁🏁🏁
 #### Depends projects: 
 - [m3-common-service](https://github.com/a-f-larionov/m3-common-service/).
 - [m3-users-service](https://github.com/a-f-larionov/m3-users-service/).
-- [m3-map-and-points-service](https://github.com/a-f-larionov/m3-map-and-points-service/).
+- [m3-map-service](https://github.com/a-f-larionov/m3-map-service/).
 - [m3-stuff-service](https://github.com/a-f-larionov/m3-stuff-service/).
 - [m3-payment-service](https://github.com/a-f-larionov/m3-payment-service/).
 - [m3-node(legacy)](https://github.com/a-f-larionov/m3-node/).
@@ -38,7 +38,7 @@ Status: 🏁🏁🏁🏁
     git clone --depth=1 https://github.com/a-f-larionov/m3-compose.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-common-service.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-users-service.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-map-and-points-service.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-map-service.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-stuff-service.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-payment-service.git
 

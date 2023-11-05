@@ -2,9 +2,9 @@
 
 CALL :buildAndCopyToServer m3-common-service
 CALL :buildAndCopyToServer m3-users-service
-CALL :buildAndCopyToServer m3-stuff-service
-CALL :buildAndCopyToServer m3-map-and-points-service
-CALL :buildAndCopyToServer m3-payment-service
+CALL :buildAndCopyToServer m3-map-service
+REM CALL :buildAndCopyToServer m3-stuff-service
+REM CALL :buildAndCopyToServer m3-payment-service
 
 docker compose up -d --build
 
@@ -25,6 +25,8 @@ call :build %PROJECT_FOLDER%
 ENDLOCAL
 EXIT /B
 
+
+
 :build
 SETLOCAL
 SET PROJECT_FOLDER=%1
@@ -32,9 +34,7 @@ SET PROJECT_FOLDER=%1
 echo build %PROJECT_FOLDER%
 cd ..
 cd %PROJECT_FOLDER%
-
-call gradle build --warning-mode all -x test
-
+call gradle build -x test
 cd ..
 cd m3-compose
 
