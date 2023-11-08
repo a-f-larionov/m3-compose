@@ -65,7 +65,7 @@ EXIT /B
 SETLOCAL
 SET PROJECT_FOLDER=%1
 
-echo publishToMaven $PROJECT_FOLDER
+echo publishToMavenLocal %PROJECT_FOLDER%
 cd ..
 cd %PROJECT_FOLDER%
 call gradle publishToMavenLocal -x test
