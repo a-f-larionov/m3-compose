@@ -8,17 +8,8 @@ CALL :build m3-map-service
 REM CALL :build m3-stuff-service
 REM CALL :build m3-payment-service
 
-docker compose up -d --build
-
 goto :eof
-
-:dockerRestart
-SETLOCAL
-    ssh root@prod-server-2.ru "cd /var/job/m3-prod/m3-compose && docker compose up -d --build"
-ENDLOCAL
-EXIT /B
-
-
+s
 :build
 SETLOCAL
 SET PROJECT_FOLDER=%1
