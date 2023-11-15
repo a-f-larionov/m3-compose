@@ -12,11 +12,19 @@ Status: ✅✅✅✅✅
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 #### [Plan stage 3 Map Service](docs/plan-stage-3-map-service.md) Map and Points Service
-Status: ✅🏁🏁🏁
+Status: ✅✅🏁🏁
 #### [Plan stage 4 Stuff Service](docs/plan-stage-4-stuff-service.md) Stuff Service
 Status: 🏁🏁🏁🏁🏁
 #### [Plan stage 5 Payment Service](docs/plan-stage-5-payment-service.md) Payment Service
 Status: 🏁🏁🏁🏁
+
+TimeLog:
+27.02.23 -  0/36  0%
+28.02.23 -  3/36  8%
+11.10.23 - 18/36 38%
+16.11.23 - 23/36 62%
+03.11.23 - 24/36 64%
+15.11.23 - 25/36 67%
 
 
 #### Depends projects: 

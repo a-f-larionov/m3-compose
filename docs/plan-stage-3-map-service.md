@@ -1,8 +1,8 @@
 ### 🥗 Stage 2 - Map
 
-Status: ✅🏁🏁🏁
+Status: ✅✅🏁🏁
 
-<br>1. 🧡 OnFinish 🎬 05.11.23 🏁 xx.xx.xx
+<br>1. 🧡 OnFinish 🎬 05.11.23 ✅ 15.11.23
 
 > 💡 Реализуем метод OnFinish Сервиса MapAndPoints
 
