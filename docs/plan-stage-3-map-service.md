@@ -10,7 +10,7 @@ Status: ✅✅🏁🏁
 
 > 💡 Реализуем метод SendMeMapInfo Сервиса MapAndPoints
 
-<br>3. 🧡 SendMePointTopScore 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>3. 🧡 SendMePointTopScore 🎬 15.11.23 🏁 xx.xx.xx
 
 > 💡 Реализуем метод SendMePointTopScore Сервиса MapAndPoints
 
