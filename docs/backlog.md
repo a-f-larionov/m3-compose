@@ -18,3 +18,6 @@
 > 💰 Валидация kafka листенера
 
 > 🎬 xx.xx.xx 🌱 26.10.23 ✅ xx.xx.xx 
+
+
+- Statistic load user and print: socNetUserId, money, stuff, health, pointId
