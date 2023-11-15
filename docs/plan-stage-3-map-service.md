@@ -6,7 +6,7 @@ Status: ✅✅🏁🏁
 
 > 💡 Реализуем метод OnFinish Сервиса MapAndPoints
 
-<br>2. 🧡 SendMeMapInfo ✅ 01.11.23 03.11.23
+<br>2. 🧡 SendMeMapInfo 🎬 01.11.23 ✅ 03.11.23
 
 > 💡 Реализуем метод SendMeMapInfo Сервиса MapAndPoints
 
