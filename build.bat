@@ -4,9 +4,7 @@ CALL :publishToLocalMaven m3-lib
 
 CALL :build m3-common-service
 CALL :build m3-users-service
-CALL :build m3-map-service
-REM CALL :build m3-stuff-service
-REM CALL :build m3-payment-service
+CALL :build m3-gameplay-service
 
 goto :eof
 s

@@ -21,21 +21,10 @@ services:
     environment: *env
     depends_on: [ kafka, mysql ]
 
-  map-service:
-    build: ../m3-map-service/
+  gameplay-service:
+    build: ../m3-gameplay-service/
     environment: *env
     depends_on: [ kafka, mysql ]
-
-#  stuff-service:
-#    build: ../m3-stuff-service/
-#    environment: *env
-#    depends_on: [ kafka, mysql ]
-#
-#
-#  payment-service:
-#    build: ../m3-payment-service/
-#    environment: *env
-#    depends_on: [ kafka, mysql ]
 
   node:
     image: node
