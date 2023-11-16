@@ -12,6 +12,7 @@ Status: ✅✅✅✅✅
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 #### [Plan stage 3 Gameplay Service](docs/plan-stage-3-gameplay-service.md) Map and Points Service
+
 Status: ✅✅🏁🏁
 Status: 🏁🏁🏁🏁🏁
 Status: 🏁🏁🏁🏁
