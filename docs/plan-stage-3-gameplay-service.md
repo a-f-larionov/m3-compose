@@ -1,6 +1,6 @@
 ### 🥗 Stage 3 - gameplay service 
 
-Status: ✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
+Status: ✅✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
 
 <br>1. 🧡 SendMeMapInfo 🎬 01.11.23 ✅ 03.11.23
 
@@ -14,7 +14,7 @@ Status: ✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
 
 > 💡 Реализуем метод SendMePointTopScore Сервиса MapAndPoints
 
-<br>4. 🧡 SendMeScores 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>4. 🧡 SendMeScores 🎬 16.11.23 🏁 xx.xx.xx
 
 > 💡 Реализуем метод SendMeScores Сервиса MapAndPoints
 
