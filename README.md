@@ -13,7 +13,7 @@ Status: ✅✅✅✅✅
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 #### [Plan stage 3 Gameplay Service](docs/plan-stage-3-gameplay-service.md) Map and Points Service
 
-Status: ✅✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
+Status: ✅✅✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁
 
 TimeLog:
 <br> 27.02.23 -  0/36  **0%**
@@ -23,6 +23,7 @@ TimeLog:
 <br>03.11.23 - 24/36 **64%**
 <br>15.11.23 - 25/36 **67%**
 <br>16.11.23 - 26/36 **72%**
+<br>17.11.23 - 27/36 **75%**
 
 
 
