@@ -18,11 +18,11 @@ Status: ✅✅✅✅🏁🏁🏁🏁🏁🏁🏁🏁🏁
 
 > 💡 Реализуем метод SendMeScores Сервиса MapAndPoints
 
-<br>5. 🧡 SendMeStuff 🎬 17.11.23 🏁 xx.xx.xx
+<br>5. 🧡 SendMeStuff 🎬 17.11.23 ✅ 18.11.23
 
 > 💡 Реализуем метод SendMeStuff Сервиса Stuff
 
-<br>6. 🧡 SpendCoinsForTurns 🎬 xx.xx.xx 🏁 xx.xx.xx
+<br>6. 🧡 SpendCoinsForTurns 🎬 18.11.23 🏁 xx.xx.xx
 
 > 💡 Реализуем метод SpendCoinsForTurns Сервиса Stuff
 
