@@ -10,7 +10,6 @@ REM CALL :dockerRestart
 
 docker compose up -d --build
 
-
 goto :eof
 
 :dockerRestart
