@@ -23,6 +23,8 @@ services:
 
   gameplay-service:
     build: ../m3-gameplay-service/
+    ports:
+      - 8081:8081
     environment: *env
     depends_on: [ kafka, mysql ]
 
@@ -34,7 +36,7 @@ services:
     volumes:
       - ../m3-node:/m3-node.${PROFILE}
     entrypoint: bash -c "npm install && node run.js"
-    depends_on: [ kafka  ]
+    depends_on: [ kafka ]
 
   nginx:
     image: nginx
