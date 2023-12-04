@@ -46,7 +46,7 @@ TimeLog:
     git clone --depth=1 https://github.com/a-f-larionov/m3-compose.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-common-service.git
     git clone --depth=1 https://github.com/a-f-larionov/m3-users-service.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-gameplay-service.git
+    git clone --depth=1 https://github.com/a-f-larionov/m3-game-service.git
 
 ### Setup
 
