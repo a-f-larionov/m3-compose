@@ -4,7 +4,7 @@ CALL :publishToLocalMaven m3-lib
 
 CALL :buildAndCopyToServer m3-common-service
 CALL :buildAndCopyToServer m3-users-service
-CALL :buildAndCopyToServer m3-gameplay-service
+CALL :buildAndCopyToServer m3-game-service
 
 REM CALL :dockerRestart
 

@@ -1,4 +1,4 @@
-### 🥗 Stage 3 - gameplay service 
+### 🥗 Stage 3 - game service 
 
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 

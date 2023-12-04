@@ -21,7 +21,7 @@ services:
     environment: *env
     depends_on: [ kafka, mysql ]
 
-  gameplay-service:
+  game-service:
     build: ../m3-gameplay-service/
     ports:
       - 8081:8081

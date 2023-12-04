@@ -11,7 +11,7 @@ Status: ✅✅✅✅✅✅
 Status: ✅✅✅✅✅
 #### [Plan stage 2 User Service](docs/plan-stage-2-user-service.md) User Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
-#### [Plan stage 3 Gameplay Service](docs/plan-stage-3-gameplay-service.md) Map and Points Service
+#### [Plan stage 3 Game Service](docs/plan-stage-3-game-service.md) Map and Points Service
 Status: ✅✅✅✅✅✅✅✅✅✅✅✅
 
 TimeLog:
@@ -32,7 +32,7 @@ TimeLog:
 #### Depends projects: 
 - [m3-common-service](https://github.com/a-f-larionov/m3-common-service/).
 - [m3-users-service](https://github.com/a-f-larionov/m3-users-service/).
-- [m3-gameplay-service](https://github.com/a-f-larionov/m3-gameplay-service/).
+- [m3-game-service](https://github.com/a-f-larionov/m3-game-service/).
 - [m3-node(legacy)](https://github.com/a-f-larionov/m3-node/).
 
 ### Requirements
