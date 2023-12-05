@@ -9,9 +9,10 @@ call :copyToServer m3-game-service
 
 cd m3-compose
 
+ssh root@prod-server-2.ru "cd /var/job/m3/m3-compose && docker compose up -d --build"
+
 goto :eof
 
-REM    ssh root@prod-server-2.ru "cd /var/job/m3/m3-compose && docker compose up -d --build"
 
 :copyToServer
 SETLOCAL
