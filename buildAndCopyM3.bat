@@ -1,7 +1,7 @@
 rem @echo off
 
 cd ..
-call gradle publishToMavenLocal build -x test
+call mvn clean install -maven.test.skip
 
 call :copyToServer m3-common-service
 call :copyToServer m3-users-service
@@ -19,10 +19,9 @@ SETLOCAL
 SET PROJECT_FOLDER=%1
 
 echo "start copy to server"
-@ssh root@prod-server-2.ru "mkdir /var/job/m3/%PROJECT_FOLDER%/build
-@ssh root@prod-server-2.ru "mkdir /var/job/m3/%PROJECT_FOLDER%/build/libs
+@ssh root@prod-server-2.ru "mkdir /var/job/m3/%PROJECT_FOLDER%/target
 
-scp -pr ./%PROJECT_FOLDER%/build/libs/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar root@prod-server-2.ru:/var/job/m3/%PROJECT_FOLDER%/build/libs/%PROJECT_FOLDER%-0.0.1-SNAPSHOT.jar
+scp -pr ./%PROJECT_FOLDER%/target/%PROJECT_FOLDER%-1.0-SNAPSHOT.jar root@prod-server-2.ru:/var/job/m3/%PROJECT_FOLDER%/target/%PROJECT_FOLDER%-1.0-SNAPSHOT.jar
 
 ENDLOCAL
 EXIT /B
