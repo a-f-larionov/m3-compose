@@ -82,4 +82,3 @@ volumes:
   DB_data:
   DB_junit_data:
   kafka_data:
-  zookeeper_data:
