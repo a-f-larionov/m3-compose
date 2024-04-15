@@ -20,3 +20,5 @@
 > 11. 🌱 BuyLightningRqDto. range 1,1 no telesend
 
 > 12. 🌱 Profiler across all services ! With time measurements ).
+
+> 13. 🌱 Promises for client

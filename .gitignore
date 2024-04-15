@@ -83,3 +83,4 @@ fabric.properties
 # Docker compose .env file
 .env
 .vscode/tasks.json
+/docs/.$m3-diagram.drawio.bkp

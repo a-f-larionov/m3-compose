@@ -8,10 +8,12 @@
 #### Create SSL keys (self signed certificate)
 
 Move private and public key to /var/m3-test/m3-compose/keys/self-signed/
-For windows use PuTTY Key Generator
 
-    linux:
-    openssl req -x509 -outform PEM -sha256 -nodes -days 365 -newkey rsa:2048 -keyout priv.key -out cert.pem
+>For windows:<br>
+> use PuTTY Key Generator
+
+>For linux:<br>
+>openssl req -x509 -outform PEM -sha256 -nodes -days 365 -newkey rsa:2048 -keyout priv.key -out cert.pem
 
 
 ##### Or Install Certbot
