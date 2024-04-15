@@ -1,10 +1,8 @@
-# M3-compose 
-
-Match three demo project.
+## Match three project
 
 Prod Version:   https://vk.com/app7506736
 
->Structure:
+> Structure:
 >- [m3-common-service](https://github.com/a-f-larionov/m3-common-service/)
 >- [m3-users-service](https://github.com/a-f-larionov/m3-users-service/)
 >- [m3-game-service](https://github.com/a-f-larionov/m3-game-service/)
@@ -14,16 +12,12 @@ Prod Version:   https://vk.com/app7506736
 
 ### Requirements
 
-[See Install Docker and create SSL keys for nginx](additional.md)
+[Install Docker and create SSL keys for nginx.](additional.md)
 
 ### Installation
 
     cd /var/ && mkdir m3-local && cd m3-local
-    git clone --depth=1 https://github.com/a-f-larionov/m3-node.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-compose.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-common-service.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-users-service.git
-    git clone --depth=1 https://github.com/a-f-larionov/m3-game-service.git
+    git clone --depth=1 --recurvise https://github.com/a-f-larionov/m3.git
 
 ### Setup
 
@@ -37,15 +31,7 @@ Prod Version:   https://vk.com/app7506736
 
 ### Test
 
-    curl http[s]://host:port/images/coin.png
     curl http[s]://host:port/service/client-standalone?soc-net-user-id=1
-
-
-### Known issues
-
-For letsencrypt set  
- /etc/letsencrypt:/var/keys/letsencrypt
-
 
 ### Contacts
 
