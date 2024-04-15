@@ -6,8 +6,9 @@ Prod Version:   https://vk.com/app7506736
 >- [m3-common-service](https://github.com/a-f-larionov/m3-common-service/)
 >- [m3-users-service](https://github.com/a-f-larionov/m3-users-service/)
 >- [m3-game-service](https://github.com/a-f-larionov/m3-game-service/)
+>- [m3-lib](https://github.com/a-f-larionov/m3-lib/)
 
-![m3-diagram.drawio.png](docs%2Fm3-diagram.drawio.png)
+![m3-diagram.drawio.png](https://raw.githubusercontent.com/a-f-larionov/m3-compose/main/docs/m3-diagram.drawio.png)
 
 ### Requirements
 
