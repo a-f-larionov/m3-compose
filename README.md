@@ -12,7 +12,7 @@ Prod Version:   https://vk.com/app7506736
 
 ### Requirements
 
-[Install Docker and create SSL keys for nginx.](additional.md)
+[Install Docker and create SSL keys for nginx.](docs/additional.md)
 
 ### Installation
 
