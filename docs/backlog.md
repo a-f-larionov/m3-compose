@@ -22,3 +22,5 @@
 > 12. 🌱 Profiler across all services ! With time measurements ).
 
 > 13. 🌱 Promises for client
+
+> 14. 🌱 Disable alerter for tests in application.yml
