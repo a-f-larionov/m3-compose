@@ -14,3 +14,4 @@
 > 14. 🌱 Disable alerter for tests in application.yml
 > 15. 🌱 First running of docker-compose.yml raise a problems - please check it!
 > 16. 🌱 Liquibase changes move to common lib!
+> 17. 🌱 @ProfileMethods everything in one place.
