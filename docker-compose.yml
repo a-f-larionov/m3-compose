@@ -69,7 +69,7 @@ services:
       - "9092:9092"
     volumes: [ kafka_data:/bitnami ]
     environment:
-      KAFKA_HEAP_OPTS: -Xmx1024m -Xmn1k -Xss256k
+      KAFKA_HEAP_OPTS: -Xmx1024m -Xmn1k -Xss256k 
       KAFKA_PROCESS_ROLES: 'broker, controller'
       KAFKA_CFG_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
       KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093

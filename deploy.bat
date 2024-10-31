@@ -12,7 +12,7 @@ cd m3-compose
 ssh root@prod-server-2.ru "cd /var/job/m3/m3-compose && docker compose up -d --build"
 
 goto :eof
-
+                      
 
 :copyToServer
 SETLOCAL
